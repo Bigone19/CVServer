@@ -367,7 +367,6 @@ bool CResTransSender::setFileInfo()
 
 bool CResTransSender::imageDetection()
 {
-	// <---------------- ÐèÒªÌí¼Ó»¥³âËø
 	try
 	{
 		m_detector = new CYoloDetector(m_config);
