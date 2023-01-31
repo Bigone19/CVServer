@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B5E3E8E5-7F02-3881-BD3C-C97E013539FF}</ProjectGuid>
+    <RootNamespace>server</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>server</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>server</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">server</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">server</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\opencv\build\include;../opencv/build/include/opencv;..\opencv\build\include\opencv2;..\Microsoft.ML.OnnxRuntime.1.10.0\build\native\include;..\..\..\Qt\6.4.1\msvc2019_64\include;..\..\..\Qt\6.4.1\msvc2019_64\include\QtWidgets;..\..\..\Qt\6.4.1\msvc2019_64\include\QtGui;..\..\..\Qt\6.4.1\msvc2019_64\include\QtSql;..\..\..\Qt\6.4.1\msvc2019_64\include\QtConcurrent;..\..\..\Qt\6.4.1\msvc2019_64\include\QtNetwork;..\..\..\Qt\6.4.1\msvc2019_64\include\QtCore;release;.;/include;..\..\..\Qt\6.4.1\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_CONCURRENT_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\opencv\build\x64\vc15\lib\opencv_world452d.lib;..\opencv\build\x64\vc15\lib\opencv_world452.lib;..\Microsoft.ML.OnnxRuntime.1.10.0\runtimes\win-x64\native\onnxruntime.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Widgets.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Gui.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Sql.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Concurrent.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Network.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\opencv\build\x64\vc15\lib;..\Microsoft.ML.OnnxRuntime.1.10.0\runtimes\win-x64\native;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\server.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_CONCURRENT_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\opencv\build\include;../opencv/build/include/opencv;..\opencv\build\include\opencv2;..\Microsoft.ML.OnnxRuntime.1.10.0\build\native\include;..\..\..\Qt\6.4.1\msvc2019_64\include;..\..\..\Qt\6.4.1\msvc2019_64\include\QtWidgets;..\..\..\Qt\6.4.1\msvc2019_64\include\QtGui;..\..\..\Qt\6.4.1\msvc2019_64\include\QtSql;..\..\..\Qt\6.4.1\msvc2019_64\include\QtConcurrent;..\..\..\Qt\6.4.1\msvc2019_64\include\QtNetwork;..\..\..\Qt\6.4.1\msvc2019_64\include\QtCore;debug;.;/include;..\..\..\Qt\6.4.1\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_CONCURRENT_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\opencv\build\x64\vc15\lib\opencv_world452d.lib;..\opencv\build\x64\vc15\lib\opencv_world452.lib;..\Microsoft.ML.OnnxRuntime.1.10.0\runtimes\win-x64\native\onnxruntime.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Widgetsd.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Guid.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Sqld.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Concurrentd.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Networkd.lib;D:\Qt\6.4.1\msvc2019_64\lib\Qt6Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\opencv\build\x64\vc15\lib;..\Microsoft.ML.OnnxRuntime.1.10.0\runtimes\win-x64\native;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/DEBUG "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\server.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_CONCURRENT_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="fileTransferRecevicer.cpp" />
+    <ClCompile Include="fileUtils.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="resTransferSender.cpp" />
+    <ClCompile Include="server.cpp" />
+    <ClCompile Include="yoloConfig.cpp" />
+    <ClCompile Include="yoloDetector.cpp" />
+    <ClCompile Include="yoloUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h" />
+    <CustomBuild Include="fileTransferRecevicer.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">fileTransferRecevicer.h;release\moc_predefs.h;D:\Qt\6.4.1\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\6.4.1\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/qt_workspace/yoloFileTransferSystem/server/release/moc_predefs.h -ID:/Qt/6.4.1/msvc2019_64/mkspecs/win32-msvc -ID:/qt_workspace/yoloFileTransferSystem/server -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv2 -ID:/qt_workspace/yoloFileTransferSystem/Microsoft.ML.OnnxRuntime.1.10.0/build/native/include -ID:/Qt/6.4.1/msvc2019_64/include -ID:/Qt/6.4.1/msvc2019_64/include/QtWidgets -ID:/Qt/6.4.1/msvc2019_64/include/QtGui -ID:/Qt/6.4.1/msvc2019_64/include/QtSql -ID:/Qt/6.4.1/msvc2019_64/include/QtConcurrent -ID:/Qt/6.4.1/msvc2019_64/include/QtNetwork -ID:/Qt/6.4.1/msvc2019_64/include/QtCore fileTransferRecevicer.h -o release\moc_fileTransferRecevicer.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC fileTransferRecevicer.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_fileTransferRecevicer.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">fileTransferRecevicer.h;debug\moc_predefs.h;D:\Qt\6.4.1\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\6.4.1\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/qt_workspace/yoloFileTransferSystem/server/debug/moc_predefs.h -ID:/Qt/6.4.1/msvc2019_64/mkspecs/win32-msvc -ID:/qt_workspace/yoloFileTransferSystem/server -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv2 -ID:/qt_workspace/yoloFileTransferSystem/Microsoft.ML.OnnxRuntime.1.10.0/build/native/include -ID:/Qt/6.4.1/msvc2019_64/include -ID:/Qt/6.4.1/msvc2019_64/include/QtWidgets -ID:/Qt/6.4.1/msvc2019_64/include/QtGui -ID:/Qt/6.4.1/msvc2019_64/include/QtSql -ID:/Qt/6.4.1/msvc2019_64/include/QtConcurrent -ID:/Qt/6.4.1/msvc2019_64/include/QtNetwork -ID:/Qt/6.4.1/msvc2019_64/include/QtCore fileTransferRecevicer.h -o debug\moc_fileTransferRecevicer.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC fileTransferRecevicer.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_fileTransferRecevicer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="resTransferSender.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">resTransferSender.h;release\moc_predefs.h;D:\Qt\6.4.1\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\6.4.1\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/qt_workspace/yoloFileTransferSystem/server/release/moc_predefs.h -ID:/Qt/6.4.1/msvc2019_64/mkspecs/win32-msvc -ID:/qt_workspace/yoloFileTransferSystem/server -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv2 -ID:/qt_workspace/yoloFileTransferSystem/Microsoft.ML.OnnxRuntime.1.10.0/build/native/include -ID:/Qt/6.4.1/msvc2019_64/include -ID:/Qt/6.4.1/msvc2019_64/include/QtWidgets -ID:/Qt/6.4.1/msvc2019_64/include/QtGui -ID:/Qt/6.4.1/msvc2019_64/include/QtSql -ID:/Qt/6.4.1/msvc2019_64/include/QtConcurrent -ID:/Qt/6.4.1/msvc2019_64/include/QtNetwork -ID:/Qt/6.4.1/msvc2019_64/include/QtCore resTransferSender.h -o release\moc_resTransferSender.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC resTransferSender.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_resTransferSender.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">resTransferSender.h;debug\moc_predefs.h;D:\Qt\6.4.1\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\6.4.1\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/qt_workspace/yoloFileTransferSystem/server/debug/moc_predefs.h -ID:/Qt/6.4.1/msvc2019_64/mkspecs/win32-msvc -ID:/qt_workspace/yoloFileTransferSystem/server -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv2 -ID:/qt_workspace/yoloFileTransferSystem/Microsoft.ML.OnnxRuntime.1.10.0/build/native/include -ID:/Qt/6.4.1/msvc2019_64/include -ID:/Qt/6.4.1/msvc2019_64/include/QtWidgets -ID:/Qt/6.4.1/msvc2019_64/include/QtGui -ID:/Qt/6.4.1/msvc2019_64/include/QtSql -ID:/Qt/6.4.1/msvc2019_64/include/QtConcurrent -ID:/Qt/6.4.1/msvc2019_64/include/QtNetwork -ID:/Qt/6.4.1/msvc2019_64/include/QtCore resTransferSender.h -o debug\moc_resTransferSender.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC resTransferSender.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_resTransferSender.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="server.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">server.h;release\moc_predefs.h;D:\Qt\6.4.1\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\6.4.1\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/qt_workspace/yoloFileTransferSystem/server/release/moc_predefs.h -ID:/Qt/6.4.1/msvc2019_64/mkspecs/win32-msvc -ID:/qt_workspace/yoloFileTransferSystem/server -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv2 -ID:/qt_workspace/yoloFileTransferSystem/Microsoft.ML.OnnxRuntime.1.10.0/build/native/include -ID:/Qt/6.4.1/msvc2019_64/include -ID:/Qt/6.4.1/msvc2019_64/include/QtWidgets -ID:/Qt/6.4.1/msvc2019_64/include/QtGui -ID:/Qt/6.4.1/msvc2019_64/include/QtSql -ID:/Qt/6.4.1/msvc2019_64/include/QtConcurrent -ID:/Qt/6.4.1/msvc2019_64/include/QtNetwork -ID:/Qt/6.4.1/msvc2019_64/include/QtCore server.h -o release\moc_server.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC server.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_server.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">server.h;debug\moc_predefs.h;D:\Qt\6.4.1\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\6.4.1\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/qt_workspace/yoloFileTransferSystem/server/debug/moc_predefs.h -ID:/Qt/6.4.1/msvc2019_64/mkspecs/win32-msvc -ID:/qt_workspace/yoloFileTransferSystem/server -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv2 -ID:/qt_workspace/yoloFileTransferSystem/Microsoft.ML.OnnxRuntime.1.10.0/build/native/include -ID:/Qt/6.4.1/msvc2019_64/include -ID:/Qt/6.4.1/msvc2019_64/include/QtWidgets -ID:/Qt/6.4.1/msvc2019_64/include/QtGui -ID:/Qt/6.4.1/msvc2019_64/include/QtSql -ID:/Qt/6.4.1/msvc2019_64/include/QtConcurrent -ID:/Qt/6.4.1/msvc2019_64/include/QtNetwork -ID:/Qt/6.4.1/msvc2019_64/include/QtCore server.h -o debug\moc_server.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC server.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_server.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="fileUtils.h" />
+    <ClInclude Include="yoloConfig.h" />
+    <CustomBuild Include="yoloDetector.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">yoloDetector.h;release\moc_predefs.h;D:\Qt\6.4.1\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\6.4.1\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DNDEBUG -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/qt_workspace/yoloFileTransferSystem/server/release/moc_predefs.h -ID:/Qt/6.4.1/msvc2019_64/mkspecs/win32-msvc -ID:/qt_workspace/yoloFileTransferSystem/server -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv2 -ID:/qt_workspace/yoloFileTransferSystem/Microsoft.ML.OnnxRuntime.1.10.0/build/native/include -ID:/Qt/6.4.1/msvc2019_64/include -ID:/Qt/6.4.1/msvc2019_64/include/QtWidgets -ID:/Qt/6.4.1/msvc2019_64/include/QtGui -ID:/Qt/6.4.1/msvc2019_64/include/QtSql -ID:/Qt/6.4.1/msvc2019_64/include/QtConcurrent -ID:/Qt/6.4.1/msvc2019_64/include/QtNetwork -ID:/Qt/6.4.1/msvc2019_64/include/QtCore yoloDetector.h -o release\moc_yoloDetector.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC yoloDetector.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_yoloDetector.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">yoloDetector.h;debug\moc_predefs.h;D:\Qt\6.4.1\msvc2019_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\6.4.1\msvc2019_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include D:/qt_workspace/yoloFileTransferSystem/server/debug/moc_predefs.h -ID:/Qt/6.4.1/msvc2019_64/mkspecs/win32-msvc -ID:/qt_workspace/yoloFileTransferSystem/server -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv -ID:/qt_workspace/yoloFileTransferSystem/opencv/build/include/opencv2 -ID:/qt_workspace/yoloFileTransferSystem/Microsoft.ML.OnnxRuntime.1.10.0/build/native/include -ID:/Qt/6.4.1/msvc2019_64/include -ID:/Qt/6.4.1/msvc2019_64/include/QtWidgets -ID:/Qt/6.4.1/msvc2019_64/include/QtGui -ID:/Qt/6.4.1/msvc2019_64/include/QtSql -ID:/Qt/6.4.1/msvc2019_64/include/QtConcurrent -ID:/Qt/6.4.1/msvc2019_64/include/QtNetwork -ID:/Qt/6.4.1/msvc2019_64/include/QtCore yoloDetector.h -o debug\moc_yoloDetector.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC yoloDetector.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_yoloDetector.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="yoloUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_fileTransferRecevicer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_fileTransferRecevicer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\Qt\6.4.1\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -BxD:\Qt\6.4.1\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\Qt\6.4.1\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\Qt\6.4.1\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -BxD:\Qt\6.4.1\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\Qt\6.4.1\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClCompile Include="debug\moc_resTransferSender.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_resTransferSender.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_server.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_server.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_yoloDetector.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_yoloDetector.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_qmake_qmake_qm_files.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\qrc_qmake_qmake_qm_files.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="ui_server.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="server_zh_CN.ts">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">server_zh_CN.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\6.4.1\msvc2019_64\bin\lrelease.exe server_zh_CN.ts -qm release\server_zh_CN.qm</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lrelease</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\server_zh_CN.qm;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">server_zh_CN.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\6.4.1\msvc2019_64\bin\lrelease.exe server_zh_CN.ts -qm debug\server_zh_CN.qm</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lrelease</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\server_zh_CN.qm;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="server.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">server.ui;D:\Qt\6.4.1\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\6.4.1\msvc2019_64\bin\uic.exe server.ui -o ui_server.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC server.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ui_server.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">server.ui;D:\Qt\6.4.1\msvc2019_64\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\6.4.1\msvc2019_64\bin\uic.exe server.ui -o ui_server.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC server.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ui_server.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\qmake_qmake_qm_files.qrc">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qmake_qmake_qm_files.qrc;D:\Qt\6.4.1\msvc2019_64\bin\rcc.exe;debug\server_zh_CN.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Qt\6.4.1\msvc2019_64\bin\rcc.exe -name qmake_qmake_qm_files --no-zstd debug\qmake_qmake_qm_files.qrc -o debug\qrc_qmake_qmake_qm_files.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RCC debug/qmake_qmake_qm_files.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qrc_qmake_qmake_qm_files.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\qmake_qmake_qm_files.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qmake_qmake_qm_files.qrc;D:\Qt\6.4.1\msvc2019_64\bin\rcc.exe;release\server_zh_CN.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\6.4.1\msvc2019_64\bin\rcc.exe -name qmake_qmake_qm_files --no-zstd release\qmake_qmake_qm_files.qrc -o release\qrc_qmake_qmake_qm_files.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RCC release/qmake_qmake_qm_files.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qrc_qmake_qmake_qm_files.cpp;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <None Include="debug\server_zh_CN.qm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="release\server_zh_CN.qm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
